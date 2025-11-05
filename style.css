@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    
+    background-image: url('https://media.istockphoto.com/id/186050215/ro/fotografie/rechini-sfat-negru.jpg?s=612x612&w=0&k=20&c=QAFLmiP7msPrv7_KRjSpfSyJCwfG8P254Ipmpi8485k=');
+    background-size: cover;       /* face imaginea să acopere tot ecranul */
+    background-repeat: no-repeat; /* nu se repetă */
+    background-position: top-center;  /* imaginea e centrată */
+
+    margin: 0;
+    padding: 0;
+}
+
+.header-dreptunghi {
+    width: 100%;
+    height: 100px;
+    background-color: #A8E8D8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 50px; /* moves it 50px down from the top */
+}
+
+.header-dreptunghi h1 {
+    color: #4caf8e;   
+    margin: 0;
+    font-size: 3rem;
+    font-family: Verdana, sans-serif;
+    text-shadow: 
+        2px 2px 0 #ffffff,   /* bottom-right */
+       -2px 2px 0 #ffffff,   /* bottom-left */
+        2px -2px 0 #ffffff,  /* top-right */
+       -2px -2px 0 #ffffff;  /* top-left */
+}
+
+
+
+
+/*-------------------------------------------------------------------*/
+
+.shark-cards {
+    display: flex;
+    justify-content: center;   /* centers the cards horizontally */
+    gap: 2rem;                 /* space between cards */
+    padding: 2rem 5%;          /* space from page edges */
+    flex-wrap: wrap;            /* wraps on smaller screens */
+}
+
+.card {
+    max-width: 300px;
+    background-color: #6adac9; /* deep green, change as you like */
+    border-radius: 20px;         /* fully rounded corners */
+    padding: 1.5rem;
+    text-align: left;
+    border: 2px solid rgba(255, 255, 255, 0.25); /* subtle border for contrast */
+    backdrop-filter: blur(6px);  /* optional glassy effect */
+    transition: transform 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.titlu-font {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    padding-top: 0;
+    margin-top: 0;
+    color: #156a5a;               /* light color for contrast */
+    text-shadow: 2px 2px 0 #ffffff;
+    font-family: 'Oswald';
+    font-size: 2rem;
+
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 0rem;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card li {
+    margin: 0.5rem 0;
+    color: #f0fdfc;
+}
+
+/*-------------------------------------------------------------------*/
+
+.postit-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 2rem 5%;
+}
+
+.postit-box {
+    width: 200px;
+    margin-top: 3rem;
+    height: 200px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;       /* vertically centers the list */
+    justify-content: center;   /* horizontally centers the list */
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+}
+
+/* Style the list inside the box */
+.postit-box ul {
+    margin: 0;
+    padding: 0;
+    list-style: disc inside;
+    color: #a58eb2;
+    list-style-type: "🫧 ";
+}
+
+/* Alternating colors */
+.postit-box:nth-child(odd) {
+    background-color: #feffdc; /* pastel yellow */
+    border: 4px dashed #6adac9;
+}
+
+.postit-box:nth-child(even) {
+    background-color: #c6fffa; /* pastel green */
+    border: 4px dashed #ffffff;
+}
