@@ -5,9 +5,12 @@ body {
     line-height: 1.6;
     
     background-image: url('https://media.istockphoto.com/id/186050215/ro/fotografie/rechini-sfat-negru.jpg?s=612x612&w=0&k=20&c=QAFLmiP7msPrv7_KRjSpfSyJCwfG8P254Ipmpi8485k=');
-    background-size: cover;       /* face imaginea să acopere tot ecranul */
-    background-repeat: no-repeat; /* nu se repetă */
-    background-position: top-center;  /* imaginea e centrată */
+    /*background-image: url('https://i.pinimg.com/736x/18/f0/47/18f04785a97db732face4051f7d473e8.jpg');*/
+    
+    background-size: cover;         /* covers entire viewport */
+    background-repeat: no-repeat;   /* no repeating */
+    background-position: center center; /* always centered */
+    background-attachment: fixed;   /* optional: parallax-like effect on scroll */
 
     margin: 0;
     padding: 0;
@@ -37,6 +40,70 @@ body {
 }
 
 
+/*-------------------------------------------------------------------*/
+
+.feature-block {
+    display: flex;
+    justify-content: center; /* center whole block horizontally */
+    gap: 2%;                 /* gap between columns */
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    align-items: flex-start; /* align top edges */
+}
+
+/* Left tall image */
+.tall-img {
+    flex: 1;                 /* equal width with right column */
+}
+
+.tall-img img {
+    width: 100%;
+    height: auto;            /* preserve original proportions */
+    display: block;
+}
+
+/* Middle column (title image + text) */
+.feature-text-column {
+    flex: 2;                 /* double width of left/right */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Title image */
+.title-image img {
+    width: 100%;
+    height: auto;            /* preserve proportions */
+    display: block;
+}
+
+/* Text box below title image */
+.feature-text {
+    width: 90%;               /* relative to middle column */
+    text-align: center;
+}
+
+.feature-text p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Right stacked images */
+.small-img-container {
+    flex: 1;                  /* equal width with left column */
+    display: flex;
+    flex-direction: column;
+    gap: 2%;                  /* space between stacked images */
+}
+
+.small-img-container img {
+    width: 100%;
+    height: auto;             /* preserve proportions */
+    display: block;
+}
 
 
 /*-------------------------------------------------------------------*/
